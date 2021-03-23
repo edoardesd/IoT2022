@@ -32,3 +32,5 @@ Internet of Things - Polimi hands-on activities 2021
 - `POST`: `coap://localhost:5683/living_room/door?create`
 
 ### Wireshark
+- filter GET: `coap.code == GET || coap.code == 69`
+- filter POST: `coap.code == POST || coap.code == 68`
