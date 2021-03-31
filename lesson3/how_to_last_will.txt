@@ -1,0 +1,2 @@
+pip3 install paho-mqtt
+python3 last_will.py

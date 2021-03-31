@@ -1,0 +1,28 @@
+mix
+
+
+ip.src  == 10.0.2.15
+ip.addr  == 10.0.2.15
+ip.src  == 127.0.0.1 && udp.port == 5683
+
+
+coap
+
+
+coap.code == POST 
+coap.code == POST || coap.code == 65
+coap.code == POST || coap.code == 68
+coap.code == POST || coap.code == PUT || coap.code == 68 
+coap.code == POST || coap.code == PUT || coap.code == 68 || coap.code == 128
+
+coap.opt.uri_path
+coap.opt.uri_path == temperature
+
+
+http.request.method == POST
+http.request.method == POST || http.response == 1
+http.request.method == POST || http.response.code == 201
+
+
+coap.opt.observe == 0 || coap follow stream
+

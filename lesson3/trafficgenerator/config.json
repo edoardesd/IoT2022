@@ -1,0 +1,309 @@
+{
+    "mqtt": {
+        "username": ["jane", "admin", "administrator", "guest", "woody", "will", "user", "username", "big", "slowthai"],
+        "password": ["doe", "admin", "administrator", "password", "pass", "mybirthday", "2020", "idles"],
+        "host": ["localhost", "test.mosquitto.org", "mqtt.eclipse.org", "broker.hivemq.com"],
+        "port": 1883,
+        "topic": ["factory/department1/section1/hydraulic_valve", 
+                  "factory/department1/section1/deposit",
+                  "factory/department1/section1/plc",
+                  "factory/department1/section2/hydraulic_valve", 
+                  "factory/department1/section2/deposit",
+                  "factory/department1/section2/plc",
+                  "factory/department1/section3/hydraulic_valve", 
+                  "factory/department1/section4/deposit",
+                  "factory/department1/section4/plc",
+                  "factory/department1/section4/hydraulic_valve", 
+                  "factory/department1/section3/deposit",
+                  "factory/department1/section5/plc",
+                  "factory/department2/section1/hydraulic_valve", 
+                  "factory/department2/section1/deposit",
+                  "factory/department2/section1/plc",
+                  "factory/department2/section2/hydraulic_valve", 
+                  "factory/department2/section2/deposit",
+                  "factory/department2/section2/plc",
+                  "factory/department2/section3/hydraulic_valve", 
+                  "factory/department2/section4/deposit",
+                  "factory/department2/section4/plc",
+                  "factory/department2/section4/hydraulic_valve", 
+                  "factory/department2/section3/deposit",
+                  "factory/department2/section5/plc",
+                  "factory/department3/section1/hydraulic_valve", 
+                  "factory/department3/section1/deposit",
+                  "factory/department3/section1/plc",
+                  "factory/department3/section2/hydraulic_valve", 
+                  "factory/department3/section2/deposit",
+                  "factory/department3/section2/plc",
+                  "factory/department3/section3/hydraulic_valve", 
+                  "factory/department3/section4/deposit",
+                  "factory/department3/section4/plc",
+                  "factory/department3/section4/hydraulic_valve", 
+                  "factory/department3/section3/deposit",
+                  "factory/department3/section5/plc",
+                  "home/floor1",
+                  "home/floor2"
+                ]
+    },
+    "misc": {
+        "interval_ms": 10000,
+        "verbose": true
+    },
+    "sensors": {
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 4005],
+            "description": "Main Entrance"
+        },
+        "Sensor 2": {
+            "lat": 90,
+            "lng": 90,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 1145],
+            "description": "Kitchen"
+        },
+        "Sensor 3": {
+            "lat": 90,
+            "lng": 10,
+            "unit": "/%",
+            "type": "humidity",
+            "range": [0, 3345],
+            "description": "Deposit"
+        },
+        "Sensor 4": {
+            "lat": 10,
+            "lng": 90,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 4225],
+            "description": "Assemlby Floor"
+        },
+        "Sensor 5": {
+            "lat": 50,
+            "lng": 50,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Offices"
+        },
+        "Actuator 1": {
+            "lat": 143,
+            "lng": 102,
+            "unit": "m",
+            "type": "robotic arm",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Actuator 2": {
+            "lat": 13,
+            "lng": 104,
+            "unit": "x",
+            "type": "wheel",
+            "range": [0, 435],
+            "description": "Main Entrance"
+        },
+        "Actuator 2": {
+            "lat": 100,
+            "lng": 140,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 1245],
+            "description": "Main Entrance"
+        },
+        "Sensor 10002": {
+            "lat": 102,
+            "lng": 103,
+            "unit": "lumen",
+            "type": "light",
+            "range": [0, 4534],
+            "description": "Main Entrance"
+        },
+        "Sensor 129": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "hum",
+            "type": "moisture",
+            "range": [0, 100],
+            "description": "Plant Pot"
+        },
+        "Actuator 929": {
+            "lat": 1300,
+            "lng": 1430,
+            "unit": ".",
+            "type": "Motion",
+            "range": [0, 45],
+            "description": "Secutiry Door"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 666": {
+            "lat": 666,
+            "lng": 666,
+            "unit": "C",
+            "type": "temperature",
+            "range": [66, 66],
+            "description": "Hell Gate"
+        },
+        "Sensor 154": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        },
+        "Sensor 1": {
+            "lat": 10,
+            "lng": 10,
+            "unit": "C",
+            "type": "temperature",
+            "range": [0, 45],
+            "description": "Main Entrance"
+        }
+    }
+}
