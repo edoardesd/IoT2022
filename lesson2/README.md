@@ -1,7 +1,4 @@
-# IoT2021
-Internet of Things - Polimi hands-on activities 2021
-
-## Lesson 2 - CoAP
+# Lesson 2 - CoAP
 
 ### HTTP 
 #### Make a request
