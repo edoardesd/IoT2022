@@ -1,6 +1,4 @@
-# iot-examples
-
-### Lesson 3
+# Lesson 3
 
 #### Publish a message
 - `mosquitto_pub -h test.mosquitto.org -p 1883 -t polimi/iot/2021/lesson3 -m "exercise 1"`

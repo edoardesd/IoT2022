@@ -1,10 +1,10 @@
 # IoT Classes 2021
 
-## [Lesson 1](https://github.com/edoardesd/iot-examples/tree/master/lesson1)
+## [Lesson 1](https://github.com/edoardesd/IoT2021/tree/master/lesson1)
 - Intro
 - Projects
 
-## [Lesson 2](https://github.com/edoardesd/iot-examples/tree/master/lesson2)
+## [Lesson 2](https://github.com/edoardesd/IoT2021/tree/master/lesson2)
 - CoAP
 - Wireshark
 
