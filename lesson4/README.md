@@ -34,3 +34,14 @@
 - [Memory usage](https://github.com/edoardesd/IoT2021/blob/master/lesson4/node-red-exec-thingspeak): use the command `free -m | awk 'FNR==2 {print $4 "\n" $3}'`
 - [Memory usage w/ dashboard](https://github.com/edoardesd/IoT2021/blob/master/lesson4/exec-dashboard-thingspeak) -> dashboard available at http://localhost:1880/ui
 - [Data processing](https://github.com/edoardesd/IoT2021/blob/master/lesson5/node-red-alert_template)
+
+## Challenge
+- Fill the [form](https://forms.office.com/r/PyMeNHGTnq)
+  + personal code 1/2
+  + comma separated values topic: `factory/all_departments/plc`
+  + comma separated values topic: `factory/all_departments/hydraulic_valve`
+- Deliver a `.zip` file on the beep folder (activity #2)
+  + Node-RED code export (json format)
+  + Thingspeak channel link (make it public)
+  + Small project report (max 1 page)
+  + Your names + ID number/matricola
