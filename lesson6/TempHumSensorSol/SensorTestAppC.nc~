@@ -1,0 +1,26 @@
+configuration SensorTestAppC {}
+
+implementation {
+
+  components MainC, SensorTestC as App;
+  components new TimerMilliC();
+  components new TempHumSensorC();
+  components new ACCSensorC();
+  components new ECGSensorC();
+
+  //Boot interface
+  App.Boot -> MainC.Boot;
+
+  //Timer interface
+  App.MilliTimer -> TimerMilliC;
+
+  //Sensor read
+  App.TempRead -> TempHumSensorC.TempRead;
+  App.HumRead -> TempHumSensorC.HumRead;
+  App.ECGSensor -> ECGSensorC.Read;
+  App.ACCSensor -> ACCSensorC.Read;
+  App.ECGControl -> ECGSensorC.SplitControl;
+  App.ACCControl -> ACCSensorC.SplitControl;
+
+}
+

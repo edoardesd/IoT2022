@@ -1,0 +1,4 @@
+COMPONENT=RadioTossAppC
+
+include $(MAKERULES)
+

@@ -1,0 +1,78 @@
+#include "Timer.h"
+
+module SensorTestC {
+
+  uses {
+	interface Boot;
+
+
+    	interface Timer<TMilli> as MilliTimer;
+
+	interface Read<uint16_t> as TempRead;
+	interface Read<uint16_t> as HumRead;
+	interface Read<uint16_t> as ACCSensor;
+	interface Read<uint16_t> as ECGSensor;
+
+	interface SplitControl as ACCControl;
+	interface SplitControl as ECGControl;
+	
+  }
+
+} implementation {
+
+  uint8_t counter=0;
+  uint8_t rec_id;
+
+  
+
+  //***************** Boot interface ********************//
+  event void Boot.booted() {
+	dbg("boot","Application booted.\n");
+        call ACCControl.start();
+  }
+
+  event void ACCControl.startDone(error_t err){
+        call ECGControl.start();
+  }
+
+  event void ECGControl.startDone(error_t err){
+     	call MilliTimer.startPeriodic( 1000 );
+  }
+
+  event void ACCControl.stopDone(error_t err){};
+  event void ECGControl.stopDone(error_t err){};
+
+
+
+
+
+  //***************** MilliTimer interface ********************//
+  event void MilliTimer.fired() {
+	call TempRead.read();
+	call HumRead.read();
+	call ECGSensor.read();
+ 	call ACCSensor.read();
+  }
+  
+  
+  //************************* Read interface **********************//
+  event void TempRead.readDone(error_t result, uint16_t data) {
+	double temp = ((double)data/65535)*100;
+	dbg("boot","temp read done %f\n",temp);
+  }
+
+  event void HumRead.readDone(error_t result, uint16_t data) {
+	double hum = ((double)data/65535)*100;
+	dbg("boot","hum read done %f\n",hum);
+  }
+
+  event void ACCSensor.readDone(error_t result, uint16_t data) {
+	dbg("boot","acc read done %d\n",data);
+  }
+
+  event void ECGSensor.readDone(error_t result, uint16_t data) {
+	dbg("boot","ecg read done %d\n",data);
+  }
+
+}
+
