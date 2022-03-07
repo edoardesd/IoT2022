@@ -1,4 +1,4 @@
-# IoT Classes 2021
+# IoT Classes 2022
 
 ## [Lesson 1](https://github.com/edoardesd/IoT2021/tree/master/lesson1)
 - Intro
