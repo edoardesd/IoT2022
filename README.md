@@ -1,6 +1,6 @@
 # IoT Classes 2022
 
-## [Intro](https://github.com/edoardesd/IoT2021/tree/master/intro)
+## [Intro](https://github.com/edoardesd/IoT2021/tree/master/Intro)
 - Intro
 - Projects
 
