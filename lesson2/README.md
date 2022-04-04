@@ -1,33 +1,45 @@
-# Lesson 2 - CoAP
+# Lesson 3
 
-### HTTP 
-#### Make a request
-- via the browser
-- via postman
-- via `curl`
+#### Publish a message
+- `mosquitto_pub -h test.mosquitto.org -p 1883 -t polimi/iot/2021/lesson3 -m "exercise 1"`
+- `-d` for additional information
 
-#### Make a request via `curl`
-##### [HTTP server test](https://github.com/edoardesd/home-HTTPserver)
-- install instructions in the repository above
-- `sudo python3 server.py`
-- normal request: `curl http://0.0.0.0:<port>/living_room/temperature`
-- verbose request: `curl -v http://0.0.0.0:<port>/living_room/temperature`
+#### Subscribe to a topic
+- `mosquitto_sub -h test.mosquitto.org -p 1883 -t polimi/iot/2021/lesson3`
+- `-d -v` for additional information
 
-### CoAP
-#### Use `Copper`
-- start the [CoAP server](https://github.com/edoardesd/home-CoAPServer) 
-- open mozilla
-- [](coap://localhost:5683/)
+#### Wildcards
+##### Single level (+)
+Topic: `polimi/iot/+/lesson3`
 
-##### Restful API
-- resource discovery
-- `GET`: `coap://127.0.0.1:5683/hello_world`
-- `POST`: `coap://127.0.0.1:5683/hello_post`
-- `GET`: `coap://localhost:5683/living_room/temperature`
-- observe
-- `PUT`: `coap://localhost:5683/living_room/door?status=CLOSED`
-- `POST`: `coap://localhost:5683/living_room/door?create`
+- polimi/iot/2020/lesson4 ?
+- polimi/iot/2021/lesson4 ?
+- polimi/iot/lesson4 ?
+- polimi/iot/2021/April/lesson4 ?
 
-### Wireshark
-- filter GET: `coap.code == GET || coap.code == 69`
-- filter POST: `coap.code == POST || coap.code == 68`
+##### Multi level (#)
+Topic: `polimi/iot/#`
+
+- polimi/iot/2021/lesson3/ ?
+- polimi/iot/2020/lesson5/exercise1 ?
+- polimi/iot/ ?
+- polimi/iot/#/lesson3 ?
+
+- `polimi/iot/#` vs `polimi/iot/+`
+
+#### Start a local broker
+`mosquitto -v`
+
+#### Retain message
+- `-r`
+
+#### Last Will ex
+1. Install python3: `sudo apt-get install python3-pip`
+2. Install paho mqtt package: `python3 -m pip install paho-mqtt`
+3. Start a subscriber: `mosquitto_sub -t <hostname> -t <topic>`
+4. Run `python3 last_will.py` and kill it
+
+- Non working will message: `mosquitto_pub -h localhost -t room2/bulb -m ON --will-payload "error, bulb disconnected" --will-topic room2/bulb/error --will-qos 2`
+
+#### $SYS topics
+- `mosquitto_sub -h test.mosquitto.org -t "\$SYS/broker/clients/connected"`

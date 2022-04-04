@@ -1,17 +1,9 @@
-# Lesson 5
+# Lesson 6
 
-## [TinyOS](hhttp://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Documentation_Wiki)
+## [TOSSIM](https://networksimulationtools.com/tossim/)
 
-1. Blink
-2. BlinkSmall
-3. RadioCountToLeds
-4. Printf
+1. RadioTossim
+2. TempHumSens
 
-Build the app with: `make telosb`
-
-## Cooja
-
-1. OPEN VM → Open Cooja
-2. File → New simulation → create network topology
-3. Network → add a node → Sky mote → move to the app folder → telosb folder → main.exe file
-
+- Build the simulation with: `make micaz sim`
+- Run the simulation with: `python RunSimulationScript.py`
